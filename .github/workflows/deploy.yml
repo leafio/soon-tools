@@ -15,13 +15,16 @@ jobs:
         with:
           node-version: "20"
       # Pick your own package manager and build script
-      - run: cd ./nuxt
-      - run: yarn
-      - run: npx nuxt build --preset github_pages
+      - name: Install
+        working-directory: ./nuxt  
+        run: yarn
+      - name: Build
+        working-directory: ./nuxt  
+        run: npx nuxt build --preset github_pages
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./.output/public
+          path: ./nuxt/.output/public
   # Deployment job
   deploy:
     # Add a dependency to the build job
