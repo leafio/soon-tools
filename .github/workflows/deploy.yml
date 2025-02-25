@@ -8,6 +8,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./nuxt
     steps:
       - uses: actions/checkout@v4
       - run: corepack enable
@@ -15,18 +19,19 @@ jobs:
         with:
           node-version: "20"
       # Pick your own package manager and build script
-      - name: Install
-        working-directory: ./nuxt  
-        run: yarn
-      - name: Build
-        working-directory: ./nuxt  
-        run: npx nuxt build --preset github_pages
+
+      - run: yarn
+      - run: npx nuxt build --preset github_pages
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./nuxt/output/public
+          path: .output/public
   # Deployment job
   deploy:
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./nuxt
     # Add a dependency to the build job
     needs: build
     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
