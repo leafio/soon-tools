@@ -9,9 +9,13 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@vite-pwa/nuxt'
   ],
-  devServer:{
-    port:9000
+  devServer: {
+    port: 9000
+  },
+  app: {
+    baseURL: '/soon-tools/'
   }
+
   // ,pwa:{
   //   manifest:{
   //     name:'soon-tools',
