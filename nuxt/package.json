@@ -8,7 +8,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "build:gh-pages": "DEPLOY_ENV=GH_PAGES  build --preset github_pages"
+    "build:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt build --preset github_pages"
   },
   "dependencies": {
     "@codemirror/lang-javascript": "^6.2.3",
