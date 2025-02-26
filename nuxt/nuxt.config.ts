@@ -9,11 +9,11 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@vite-pwa/nuxt'
   ],
-  devServer: {
-    port: 9000
+  devServer:{
+    port:9000
   },
   app: {
-    baseURL: '/soon-tools/'
+    baseURL: process.env.DEPLOY_ENV === 'GH_PAGES' ? '/soon-tools/' : '/' 
   }
 
   // ,pwa:{

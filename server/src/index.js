@@ -1,19 +1,24 @@
-const express = require("express")
-const path = require("path")
+const express = require("express");
+const path = require("path");
 
-const app = express()
+const app = express();
 
-const { program } = require("commander")
+const { program } = require("commander");
 
-program.option("-p,--port <number>")
+program.option("-p,--port <number>");
 
-program.parse()
-const options = program.opts()
-const { port = "9000" } = options
+program.parse();
+const options = program.opts();
+const { port = "9000" } = options;
 
-const webHome = path.resolve(__dirname, "../web")
-app.use(express.static(webHome))
+const webHome = path.resolve(__dirname, "../web");
+app.use(express.static(webHome));
+
+const open = require("opn");
 
 app.listen(port, () => {
-    console.log(`soon-tools is running at http://localhost:${port}`)
-})
+    const url = `http://localhost:${port}`;
+    console.log(`soon-tools is running at ${url}`);
+    // 使用系统默认浏览器打开网址
+    open(url);
+});

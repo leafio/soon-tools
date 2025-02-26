@@ -1,6 +1,6 @@
 {
   "name": "soon-tools",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A website full of collection of tools for developers. Includes Json/Js convert to Typescript types",
   "license": "MIT",
   "files": [
