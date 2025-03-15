@@ -2,12 +2,15 @@
     <div class="mx-2 flex flex-col h-full">
         <div class="flex items-center my-2 justify-end">
             <div class="flex items-center gap-6">
+                <UCheckbox class="cursor-pointer" v-model="options.addExport" label="Export"></UCheckbox>
+                <UCheckbox class="cursor-pointer" v-model="options.addDeclare" label="Declare"></UCheckbox>
                 <UCheckbox class="cursor-pointer" v-model="options.useInterface" label="Interface"></UCheckbox>
 
                 <UFormGroup :label="t('extract')" class="flex items-center">
                     <UInput type="number" class="ml-1" v-model="options.extract" :min="0"></UInput>
                 </UFormGroup>
-
+                <UCheckbox class="cursor-pointer" v-model="options.nullable" label="Nullable"></UCheckbox>
+                <UCheckbox class="cursor-pointer" v-model="options.optional" label="Optional"></UCheckbox>
                 <UButton @click="handleClick">{{ t("convert") }}</UButton>
             </div>
         </div>
@@ -74,6 +77,10 @@ onMounted(() => {
 const options = reactive({
     useInterface: false,
     extract: 0,
+    addExport:true,
+    addDeclare:false,
+    optional:false,
+    nullable:false,
 })
 onMounted(() => {
     const config = soon_local.json2type.get()

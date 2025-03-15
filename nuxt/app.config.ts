@@ -4,6 +4,9 @@ export default defineAppConfig({
         // Show toasts at the top right of the screen
         // position: 'top-0 bottom-[unset]'
       }
+    },
+    icon:{
+      provider:'server'
     }
   })
   
