@@ -1,25 +1,30 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2024-04-03',
+  ssr:false,
   devtools: { enabled: true },
-  modules: [
-    '@nuxt/ui',
-    'nuxt-shiki',
-    '@vueuse/nuxt',
-    '@pinia/nuxt',
-    '@vite-pwa/nuxt'
-  ],
-  devServer:{
-    port:9000
-  },
   app: {
     baseURL: process.env.DEPLOY_ENV === 'GH_PAGES' ? '/soon-tools/' : '/' 
-  }
+  },
+  modules: [
+    '@nuxt/ui',
+    '@nuxt/eslint',
+    '@nuxt/fonts',
+    '@nuxt/icon',
+    '@nuxt/image',
+    '@nuxt/scripts',
+    '@pinia/nuxt',
+    '@vueuse/nuxt',
+    '@element-plus/nuxt'
+  ],
+  fonts: {
+    provider:'none'
+  },
 
-  // ,pwa:{
-  //   manifest:{
-  //     name:'soon-tools',
-  //     short_name:'soon-tools'
-  //   }
-  // }
+  css: ['~/assets/css/main.css'],
+
+  future: {
+    compatibilityVersion: 4
+  },
+
+  compatibilityDate: '2024-11-27'
 })

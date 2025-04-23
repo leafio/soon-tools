@@ -1,16 +1,22 @@
 {
   "name": "soon-tools",
-  "version": "0.0.3",
-  "description": "A website full of collection of tools for developers. Includes Json/Js convert to Typescript types",
+  "version": "0.0.8",
+  "description": "A website full of collection of tools for developers. Includes JSON/Js convert to Typescript types;JSON convert to Excel ",
   "license": "MIT",
   "files": [
     "bin",
     "web"
   ],
-  "bin": "./bin/server.js",
+  "bin": "./bin/index.js",
   "keywords": [
     "convert",
     "json",
     "web"
-  ]
+  ],
+  "dependencies": {
+
+  },
+  "devDependencies": {
+
+  }
 }

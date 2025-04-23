@@ -22,6 +22,7 @@ flutter:
     - assets/web/
     - assets/web/json/
     - assets/web/json/type/
+    - assets/web/json/excel/
     - assets/web/support/
     - assets/web/_nuxt/
     - assets/web/_nuxt/builds/
