@@ -9,7 +9,8 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
-    "lint:fix": "eslint --fix ."
+    "lint:fix": "eslint --fix .",
+    "build:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt build --preset github_pages"
   },
   "dependencies": {
     "@codemirror/lang-javascript": "^6.2.3",
