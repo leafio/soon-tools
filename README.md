@@ -19,7 +19,7 @@
 ```bash
     npx soon-tools -p 9000
 ```
-### Offline `exe` file
+### Offline `exe` file (https://github.com/leafio/soon-tools/releases)
 
 <!-- ### 2、dist preview
 
@@ -68,7 +68,7 @@
 ```bash
     npx soon-tools -p 9000
 ```
-### 离线exe(https://github.com/leafio/soon-tools/releases)
+### 离线exe (https://github.com/leafio/soon-tools/releases)
 
 <!-- ### 2、预览 dist 文件
 

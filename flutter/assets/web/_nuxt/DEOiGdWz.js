@@ -1,1 +1,0 @@
-import{e as n,f as a,c as o,o as s,n as _}from"./D9YgJou2.js";const m=n({__name:"index",async setup(c){let e,t;return[e,t]=a(()=>_("/json/type/")),await e,t(),(r,p)=>(s(),o("div"))}});export{m as default};
